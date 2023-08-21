@@ -37,4 +37,21 @@ public class Tarefa {
     public PrioridadeTarefa getPrioridade() {
         return this.prioridade;
     }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setDataDeVencimento(LocalDate dataDeVencimento) {
+        this.dataDeVencimento = dataDeVencimento;
+    }
+
+    public void setPrioridade(PrioridadeTarefa prioridade) {
+        this.prioridade = prioridade;
+    }
+
 }
