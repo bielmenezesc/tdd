@@ -25,4 +25,10 @@ public class GerenciadorDeTarefasTest {
     public void listarTarefas_ConteudoVazio() {
         assertEquals(new ArrayList<Tarefa>(), gerenciador.listarTarefas());
     }
+
+    @Test
+    public void listarTarefas_TamanhoNaoVazio() {
+        gerenciador.adicionarTarefa(new Tarefa());
+        assertEquals(1, gerenciador.listarTarefas().size());
+    }
 }
