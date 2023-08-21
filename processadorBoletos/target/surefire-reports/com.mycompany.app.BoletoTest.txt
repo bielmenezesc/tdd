@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.app.BoletoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! - in com.mycompany.app.BoletoTest
-testBoleto(com.mycompany.app.BoletoTest)  Time elapsed: 0.002 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<...xxx - 17/03/2001 - 5[1]9.49> but was:<...xxx - 17/03/2001 - 5[4]9.49>
-	at com.mycompany.app.BoletoTest.testBoleto(BoletoTest.java:19)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.mycompany.app.BoletoTest
