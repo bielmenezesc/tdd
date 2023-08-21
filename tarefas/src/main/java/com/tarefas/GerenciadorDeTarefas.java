@@ -2,6 +2,8 @@ package com.tarefas;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class GerenciadorDeTarefas {
@@ -13,6 +15,18 @@ public class GerenciadorDeTarefas {
 
     public ArrayList<Tarefa> listarTarefas() {
         return new ArrayList<Tarefa>(this.tarefas.values());
+    }
+
+    public ArrayList<Tarefa> listarTarefasOrdenadasPorDataDeVencimento() {
+        ArrayList<Tarefa> tarefasOrdenadas = listarTarefas();
+        Collections.sort(tarefasOrdenadas, Comparator.comparing(Tarefa::getDataDeVencimento));
+        return tarefasOrdenadas;
+    }
+
+    public ArrayList<Tarefa> listarTarefasOrdenadasPorPrioridade() {
+        ArrayList<Tarefa> tarefasOrdenadas = listarTarefas();
+        Collections.sort(tarefasOrdenadas, Comparator.comparing(Tarefa::getPrioridade));
+        return tarefasOrdenadas;
     }
 
     public void adicionarTarefa(Tarefa tarefa) {
