@@ -23,25 +23,29 @@ public class GerenciadorDeTarefas {
         this.tarefas.remove(tituloTarefa);
     }
 
+    public Tarefa getTarefa(String tituloTarefa) {
+        return this.tarefas.get(tituloTarefa);
+    }
+
     public void atualizarTituloTarefa(String tituloTarefa, String novoTitulo) {
-        Tarefa tarefa = this.tarefas.get(tituloTarefa);
+        Tarefa tarefa = getTarefa(tituloTarefa);
         removerTarefa(tituloTarefa);
         tarefa.setTitulo(novoTitulo);
         adicionarTarefa(tarefa);
     }
 
     public void atualizarDescricaoTarefa(String tituloTarefa, String novaDescricao) {
-        Tarefa tarefa = this.tarefas.get(tituloTarefa);
+        Tarefa tarefa = getTarefa(tituloTarefa);
         tarefa.setDescricao(novaDescricao);
     }
 
     public void atualizarDataDeVencimentoTarefa(String tituloTarefa, LocalDate novaDataDeVencimento) {
-        Tarefa tarefa = this.tarefas.get(tituloTarefa);
+        Tarefa tarefa = getTarefa(tituloTarefa);
         tarefa.setDataDeVencimento(novaDataDeVencimento);
     }
 
     public void atualizarPrioridadeTarefa(String tituloTarefa, PrioridadeTarefa novaPrioridade) {
-        Tarefa tarefa = this.tarefas.get(tituloTarefa);
+        Tarefa tarefa = getTarefa(tituloTarefa);
         tarefa.setPrioridade(novaPrioridade);
     }
 }
