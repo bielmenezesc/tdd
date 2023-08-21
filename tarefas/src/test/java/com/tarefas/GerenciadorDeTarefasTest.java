@@ -2,6 +2,7 @@ package com.tarefas;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -30,5 +31,25 @@ public class GerenciadorDeTarefasTest {
     public void listarTarefas_TamanhoNaoVazio() {
         gerenciador.adicionarTarefa(new Tarefa());
         assertEquals(1, gerenciador.listarTarefas().size());
+    }
+
+    @Test
+    public void listarTarefas_ConteudoNaoVazio() {
+        Tarefa tarefa = new Tarefa("Titulo", "Descricao", LocalDate.parse("2023-09-09"), PrioridadeTarefa.ALTA);
+        gerenciador.adicionarTarefa(tarefa);
+        Tarefa tarefaInserida = gerenciador.listarTarefas().get(0);
+
+        assertEquals(tarefa.getTitulo(), tarefaInserida.getTitulo());
+        assertEquals(tarefa.getDescricao(), tarefaInserida.getDescricao());
+        assertEquals(tarefa.getDataDeVencimento(), tarefaInserida.getDataDeVencimento());
+        assertEquals(tarefa.getPrioridade(), tarefaInserida.getPrioridade());
+    }
+
+    @Test
+    public void atualizarTituloTarefa() {
+        Tarefa tarefa = new Tarefa("Titulo", "Descricao", LocalDate.parse("2023-09-09"), PrioridadeTarefa.ALTA);
+        gerenciador.adicionarTarefa(tarefa);
+        gerenciador.atualizarTituloTarefa("Titulo", "NovoTitulo");
+        assertEquals("NovoTitulo", gerenciador.listarTarefas().get(0).getTitulo());
     }
 }
