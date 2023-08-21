@@ -8,13 +8,6 @@ public class Tarefa {
     private LocalDate dataDeVencimento;
     private PrioridadeTarefa prioridade;
 
-    public Tarefa() {
-        this.titulo = "";
-        this.descricao = "";
-        this.dataDeVencimento = null;
-        this.prioridade = PrioridadeTarefa.BAIXA;
-    }
-
     public Tarefa(String titulo, String descricao, LocalDate dataDeVencimento, PrioridadeTarefa prioridade) {
         this.titulo = titulo;
         this.descricao = descricao ;

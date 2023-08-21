@@ -34,12 +34,11 @@ public class GerenciadorDeTarefas {
         Collections.sort(tarefasOrdenadas, new Comparator<Tarefa>() {
             @Override
             public int compare(Tarefa tarefa1, Tarefa tarefa2) {
-                if (tarefa1.getDataDeVencimento() != null && tarefa2.getDataDeVencimento() != null) {
-                    int comparaDatas = tarefa1.getDataDeVencimento().compareTo(tarefa2.getDataDeVencimento());
-                    if (comparaDatas != 0) {
-                        return comparaDatas;
-                    }
+                int comparaDatas = tarefa1.getDataDeVencimento().compareTo(tarefa2.getDataDeVencimento());
+                if (comparaDatas != 0) {
+                    return comparaDatas;
                 }
+
                 return tarefa1.getPrioridade().compareTo(tarefa2.getPrioridade());
             }
         });

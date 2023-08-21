@@ -8,16 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class TarefaTest {
     @Test
-    public void novaTarefa_Vazia() {
-        Tarefa tarefa = new Tarefa();
-        assertEquals("", tarefa.getTitulo());
-        assertEquals("", tarefa.getDescricao());
-        assertEquals(null, tarefa.getDataDeVencimento());
-        assertEquals(PrioridadeTarefa.BAIXA, tarefa.getPrioridade());
-    }
-
-    @Test
-    public void novaTarefa_ComDetalhes() {
+    public void novaTarefa() {
         Tarefa tarefa = new Tarefa("Titulo", "Descricao", LocalDate.parse("2023-09-09"), PrioridadeTarefa.ALTA);
         assertEquals("Titulo", tarefa.getTitulo());
         assertEquals("Descricao", tarefa.getDescricao());
