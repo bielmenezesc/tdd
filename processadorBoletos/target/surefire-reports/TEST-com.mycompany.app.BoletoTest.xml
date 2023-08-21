@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.AppTest" time="0.115" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.BoletoTest" time="0.003" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -58,5 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.mycompany.app.AppTest" time="0.004"/>
+  <testcase name="testBoleto" classname="com.mycompany.app.BoletoTest" time="0.002">
+    <failure message="expected:&lt;...xxx - 17/03/2001 - 5[1]9.49&gt; but was:&lt;...xxx - 17/03/2001 - 5[4]9.49&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<...xxx - 17/03/2001 - 5[1]9.49> but was:<...xxx - 17/03/2001 - 5[4]9.49>
+	at com.mycompany.app.BoletoTest.testBoleto(BoletoTest.java:19)
+]]></failure>
+  </testcase>
 </testsuite>
