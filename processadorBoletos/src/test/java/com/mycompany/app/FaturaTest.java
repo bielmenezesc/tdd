@@ -4,15 +4,13 @@ import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-public class BoletoTest {
-
+public class FaturaTest {
     @Test
-    public void testBoleto() {
-        Boleto boleto = new Boleto("xxxxxxxxxx", "17/03/2001", 549.49);
+    public void testFatura() {
+        FaturaTest fatura = new Fatura("17/03/2001", 549.49, "Gabriel Menezes Cabral");
         
         // Verificando se a instância não é nula
-        assertNotNull(boleto);
+        assertNotNull(fatura);
 
     }
-
 }
