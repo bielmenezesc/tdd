@@ -29,7 +29,8 @@ public class GerenciadorDeTarefasTest {
 
     @Test
     public void listarTarefas_TamanhoNaoVazio() {
-        gerenciador.adicionarTarefa(new Tarefa());
+        Tarefa tarefa = new Tarefa("Titulo", "Descricao", LocalDate.parse("2023-09-09"), PrioridadeTarefa.ALTA);
+        gerenciador.adicionarTarefa(tarefa);
         assertEquals(1, gerenciador.listarTarefas().size());
     }
 
