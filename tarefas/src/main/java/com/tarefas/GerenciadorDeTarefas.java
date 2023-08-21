@@ -29,6 +29,21 @@ public class GerenciadorDeTarefas {
         return tarefasOrdenadas;
     }
 
+    public ArrayList<Tarefa> listarTarefasOrdenadasPorDataDeVencimentoEPrioridade() {
+        ArrayList<Tarefa> tarefasOrdenadas = listarTarefas();
+        Collections.sort(tarefasOrdenadas, new Comparator<Tarefa>() {
+            @Override
+            public int compare(Tarefa tarefa1, Tarefa tarefa2) {
+                int comparaDatas = tarefa1.getDataDeVencimento().compareTo(tarefa2.getDataDeVencimento());
+                if (comparaDatas != 0) {
+                    return comparaDatas;
+                }
+                return tarefa1.getPrioridade().compareTo(tarefa2.getPrioridade());
+            }
+        });
+        return tarefasOrdenadas;
+    }
+
     public void adicionarTarefa(Tarefa tarefa) {
         this.tarefas.put(tarefa.getTitulo(), tarefa);
     }
