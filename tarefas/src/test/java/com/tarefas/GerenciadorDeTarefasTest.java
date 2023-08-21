@@ -52,4 +52,29 @@ public class GerenciadorDeTarefasTest {
         gerenciador.atualizarTituloTarefa("Titulo", "NovoTitulo");
         assertEquals("NovoTitulo", gerenciador.listarTarefas().get(0).getTitulo());
     }
+
+    @Test
+    public void atualizarDescricaoTarefa() {
+        Tarefa tarefa = new Tarefa("Titulo", "Descricao", LocalDate.parse("2023-09-09"), PrioridadeTarefa.ALTA);
+        gerenciador.adicionarTarefa(tarefa);
+        gerenciador.atualizarDescricaoTarefa("Titulo", "NovaDescricao");
+        assertEquals("NovaDescricao", gerenciador.listarTarefas().get(0).getDescricao());
+    }
+
+    @Test
+    public void atualizarDataDeVencimentoTarefa() {
+        Tarefa tarefa = new Tarefa("Titulo", "Descricao", LocalDate.parse("2023-09-09"), PrioridadeTarefa.ALTA);
+        LocalDate novaData = LocalDate.parse("2023-11-11");
+        gerenciador.adicionarTarefa(tarefa);
+        gerenciador.atualizarDataDeVencimentoTarefa("Titulo", novaData);
+        assertEquals(novaData, gerenciador.listarTarefas().get(0).getDataDeVencimento());
+    }
+
+    @Test
+    public void atualizarPrioridadeTarefa() {
+        Tarefa tarefa = new Tarefa("Titulo", "Descricao", LocalDate.parse("2023-09-09"), PrioridadeTarefa.ALTA);
+        gerenciador.adicionarTarefa(tarefa);
+        gerenciador.atualizarPrioridadeTarefa("Titulo", PrioridadeTarefa.MEDIA);
+        assertEquals(PrioridadeTarefa.MEDIA, gerenciador.listarTarefas().get(0).getPrioridade());
+    }
 }
