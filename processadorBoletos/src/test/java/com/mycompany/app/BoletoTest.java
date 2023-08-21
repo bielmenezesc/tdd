@@ -14,4 +14,6 @@ public class BoletoTest {
         // Verificando se a instância não é nula
         assertNotNull(boleto);
 
+    }
+
 }
