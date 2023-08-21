@@ -15,6 +15,13 @@ public class Tarefa {
         this.prioridade = PrioridadeTarefa.BAIXA;
     }
 
+    public Tarefa(String titulo, String descricao, LocalDate dataDeVencimento, PrioridadeTarefa prioridade) {
+        this.titulo = titulo;
+        this.descricao = descricao ;
+        this.dataDeVencimento = dataDeVencimento;
+        this.prioridade = prioridade;
+    }
+
     public String getTitulo() {
         return this.titulo;
     }
