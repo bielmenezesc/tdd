@@ -4,7 +4,7 @@ public class Boleto {
 
     private String codigo;
     private String data;
-    private Double valor;
+    Double valor;
 
     public Boleto(String codigo, String data, Double valor) {
         this.codigo = codigo;

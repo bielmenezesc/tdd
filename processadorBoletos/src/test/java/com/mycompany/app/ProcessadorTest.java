@@ -1,17 +1,12 @@
 package com.mycompany.app;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
 public class ProcessadorTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+ 
     @Test
     public void testProcessador() {
 
@@ -24,18 +19,11 @@ public class ProcessadorTest
 
         Fatura fatura = new Fatura("17/03/2001", 549.49, "Gabriel Menezes Cabral");
 
-        Double somaBoletos = 0.0;
+        Processador processador = new Processador();
 
-        for (int i = 0; i < boletos.length; i++) {
-            Boleto boleto = boletos[i];
-            somaBoletos += boleto.valor;
-        }
+        processador.processarBoletos(boletos, fatura);
 
-        if (fatura.valor <= somaBoletos) {
-            assertEquals(fatura.situacao, "PAGA");
-        } else {
-            assertEquals(fatura.situacao, "NAO PAGA");
-        }
+        assertEquals(fatura.situacao, "PAGA");
 
     }
 }
