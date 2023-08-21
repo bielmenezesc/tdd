@@ -10,7 +10,7 @@ public class Processador {
         for (int i = 0; i < boletos.length; i++) {
             Boleto boleto = boletos[i];
             somaBoletos += boleto.valor;
-            new Pagamento(boleto.valor, LocalDate.now(), "BOLETO");
+            new Pagamento(boleto.valor, LocalDate.now(), "BOLETO", boleto, fatura);
         }
 
         if (somaBoletos >= fatura.valor) {
