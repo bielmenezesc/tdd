@@ -1,6 +1,6 @@
 package com.tarefas;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ public class GerenciadorDeTarefasTest {
     }
 
     @Test
-    public void listarTarefas_Vazio() {
-        assertTrue(gerenciador.listarTarefas().size() == 0);
+    public void listarTarefas_TamanhoVazio() {
+        assertEquals(0, gerenciador.listarTarefas().size());
     }
 }
