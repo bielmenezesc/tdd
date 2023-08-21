@@ -1,13 +1,15 @@
 package com.mycompany.app;
 
+import java.time.LocalDate;
+
 public class Fatura {
 
-    private String data;
+    private LocalDate data;
     Double valor;
     private String nomeCliente;
     String situacao;
 
-    public Fatura(String data, Double valor, String nomeCliente) {
+    public Fatura(LocalDate data, Double valor, String nomeCliente) {
         this.data = data;
         this.valor = valor;
         this.nomeCliente = nomeCliente;
