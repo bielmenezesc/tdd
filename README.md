@@ -4,7 +4,7 @@ Exercício da cadeira de Verificação &amp; Validação de Software sobre como 
 ## Dupla
 
 - Gabriel Menezes Cabral (Matrícula: 119110372)
-- Lucas Miná (Matrícula: 119110305)
+- Lucas da Rocha Miná (Matrícula: 119110305)
 
 # Sistemas Desenvolvidos
 - Processador de Boletos (Gabriel Menezes)
