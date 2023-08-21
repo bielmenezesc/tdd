@@ -77,4 +77,20 @@ public class GerenciadorDeTarefasTest {
         gerenciador.atualizarPrioridadeTarefa("Titulo", PrioridadeTarefa.MEDIA);
         assertEquals(PrioridadeTarefa.MEDIA, gerenciador.listarTarefas().get(0).getPrioridade());
     }
+
+    @Test
+    public void removerTarefa() {
+        Tarefa tarefa1 = new Tarefa("Titulo1", "Descricao1", LocalDate.parse("2001-01-01"), PrioridadeTarefa.ALTA);
+        Tarefa tarefa2 = new Tarefa("Titulo2", "Descricao2", LocalDate.parse("2002-02-02"), PrioridadeTarefa.MEDIA);
+        gerenciador.adicionarTarefa(tarefa1);
+        gerenciador.adicionarTarefa(tarefa2);
+        gerenciador.removerTarefa(tarefa1.getTitulo());
+
+        Tarefa tarefaRestante = gerenciador.listarTarefas().get(0);
+        assertEquals(1, gerenciador.listarTarefas().size());
+        assertEquals(tarefa2.getTitulo(), tarefaRestante.getTitulo());
+        assertEquals(tarefa2.getDescricao(), tarefaRestante.getDescricao());
+        assertEquals(tarefa2.getDataDeVencimento(), tarefaRestante.getDataDeVencimento());
+        assertEquals(tarefa2.getPrioridade(), tarefaRestante.getPrioridade());
+    }
 }
