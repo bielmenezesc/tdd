@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.app.FaturaTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.016 s <<< FAILURE! - in com.mycompany.app.FaturaTest
-testFatura(com.mycompany.app.FaturaTest)  Time elapsed: 0.004 s  <<< ERROR!
-java.lang.Error: 
-Unresolved compilation problem: 
-	Type mismatch: cannot convert from Fatura to FaturaTest
-
-	at com.mycompany.app.FaturaTest.testFatura(FaturaTest.java:10)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.mycompany.app.FaturaTest
