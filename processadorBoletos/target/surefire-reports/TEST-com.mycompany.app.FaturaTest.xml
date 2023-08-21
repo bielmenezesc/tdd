@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.FaturaTest" time="0.001" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.app.FaturaTest" time="0.013" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Gabriel\AppData\Local\Temp\surefire17481160279004540616\surefirebooter10701701109823831754.jar C:\Users\Gabriel\AppData\Local\Temp\surefire17481160279004540616 2023-08-21T09-13-01_797-jvmRun1 surefire288322615848184444tmp surefire_07656417945431697669tmp"/>
+    <property name="sun.java.command" value="C:\Users\Gabriel\AppData\Local\Temp\surefire8340235049384596568\surefirebooter7493847873353916288.jar C:\Users\Gabriel\AppData\Local\Temp\surefire8340235049384596568 2023-08-21T10-33-29_434-jvmRun1 surefire11028163220629560840tmp surefire_06178899461290561742tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Gabriel\Documents\tdd\processadorBoletos\target\test-classes;C:\Users\Gabriel\Documents\tdd\processadorBoletos\target\classes;C:\Users\Gabriel\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Gabriel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Gabriel\AppData\Local\Temp\surefire17481160279004540616\surefirebooter10701701109823831754.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Gabriel\AppData\Local\Temp\surefire8340235049384596568\surefirebooter7493847873353916288.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="12.0.2+10"/>
