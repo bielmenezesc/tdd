@@ -30,7 +30,7 @@ public class ProcessadorTest {
         Processador processador = new Processador();
         processador.processarBoletos(boletos1, fatura);
 
-        assertEquals(fatura.situacao, "PAGA");
+        assertEquals(fatura.getSituacao(), SituacaoBoleto.PAGA);
 
     }
 
@@ -40,7 +40,7 @@ public class ProcessadorTest {
         Processador processador = new Processador();
         processador.processarBoletos(boletos2, fatura);
 
-        assertEquals(fatura.situacao, "NAO PAGA");
+        assertEquals(fatura.getSituacao(), SituacaoBoleto.NAO_PAGA);
 
     }
 }
