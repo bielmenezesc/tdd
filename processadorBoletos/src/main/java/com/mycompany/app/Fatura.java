@@ -5,19 +5,27 @@ import java.time.LocalDate;
 public class Fatura {
 
     private LocalDate data;
-    Double valor;
+    private Double valor;
     private String nomeCliente;
-    String situacao;
+    private SituacaoBoleto situacao;
 
     public Fatura(LocalDate data, Double valor, String nomeCliente) {
         this.data = data;
         this.valor = valor;
         this.nomeCliente = nomeCliente;
-        this.situacao = "NAO PAGA";
+        this.situacao = SituacaoBoleto.NAO_PAGA;
     }
 
     public void setFaturaPaga() {
-       this.situacao = "PAGA";
+       this.situacao = SituacaoBoleto.PAGA;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public SituacaoBoleto getSituacao() {
+        return situacao;
     }
 
 }
