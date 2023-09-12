@@ -25,7 +25,7 @@ public class ProcessadorTest {
     Fatura fatura = new Fatura(LocalDate.now(), 549.49, "Gabriel Menezes Cabral");
 
     @Test
-    public void testFaturaPaga() {
+    public void testFaturaPaga() throws Exception {
         
         Processador processador = new Processador();
         processador.processarBoletos(boletos1, fatura);
@@ -35,7 +35,7 @@ public class ProcessadorTest {
     }
 
     @Test
-    public void testFaturaNaoPaga() {
+    public void testFaturaNaoPaga() throws Exception {
         
         Processador processador = new Processador();
         processador.processarBoletos(boletos2, fatura);
