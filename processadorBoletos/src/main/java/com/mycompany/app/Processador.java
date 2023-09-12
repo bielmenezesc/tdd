@@ -10,6 +10,7 @@ public class Processador {
         for (int i = 0; i < boletos.length; i++) {
             Boleto boleto = boletos[i];
             somaBoletos += boleto.getValor();
+            fatura.subtraiValor(boleto.getValor());
             new Pagamento(boleto.getValor(), LocalDate.now(), TipoPagamento.BOLETO, boleto, fatura);
         }
 

@@ -24,6 +24,10 @@ public class Fatura {
         return valor;
     }
 
+    public void subtraiValor(Double valorBoleto) {
+        this.valor -= valorBoleto;
+    }
+
     public SituacaoBoleto getSituacao() {
         return situacao;
     }
