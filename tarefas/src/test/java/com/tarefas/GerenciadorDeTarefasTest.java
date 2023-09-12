@@ -96,36 +96,12 @@ public class GerenciadorDeTarefasTest {
     }
 
     @Test
-    public void listarTarefasOrdenadasPorDataDeVencimento() {
-        Tarefa tarefa1 = new Tarefa("Titulo1", "Descricao1", LocalDate.parse("2011-11-11"), PrioridadeTarefa.ALTA);
-        Tarefa tarefa2 = new Tarefa("Titulo2", "Descricao2", LocalDate.parse("2002-02-02"), PrioridadeTarefa.MEDIA);
-        gerenciador.adicionarTarefa(tarefa1);
-        gerenciador.adicionarTarefa(tarefa2);
-        ArrayList<Tarefa> lista = gerenciador.listarTarefasOrdenadasPorDataDeVencimento();
-
-        assertEquals(tarefa2.getTitulo(), lista.get(0).getTitulo());
-        assertEquals(tarefa1.getTitulo(), lista.get(1).getTitulo());
-    }
-
-    @Test
-    public void listarTarefasOrdenadasPorPrioridade() {
-        Tarefa tarefa1 = new Tarefa("Titulo1", "Descricao1", LocalDate.parse("2011-11-11"), PrioridadeTarefa.ALTA);
-        Tarefa tarefa2 = new Tarefa("Titulo2", "Descricao2", LocalDate.parse("2002-02-02"), PrioridadeTarefa.MEDIA);
-        gerenciador.adicionarTarefa(tarefa1);
-        gerenciador.adicionarTarefa(tarefa2);
-        ArrayList<Tarefa> lista = gerenciador.listarTarefasOrdenadasPorPrioridade();
-
-        assertEquals(tarefa1.getTitulo(), lista.get(0).getTitulo());
-        assertEquals(tarefa2.getTitulo(), lista.get(1).getTitulo());
-    }
-
-    @Test
-    public void listarTarefasOrdenadasPorDataDeVencimentoEPrioridade() {
+    public void listarTarefasOrdenadas() {
         Tarefa tarefa1 = new Tarefa("Titulo1", "Descricao1", LocalDate.parse("2011-11-11"), PrioridadeTarefa.BAIXA);
         Tarefa tarefa2 = new Tarefa("Titulo2", "Descricao2", LocalDate.parse("2011-11-11"), PrioridadeTarefa.MEDIA);
         gerenciador.adicionarTarefa(tarefa1);
         gerenciador.adicionarTarefa(tarefa2);
-        ArrayList<Tarefa> lista = gerenciador.listarTarefasOrdenadasPorDataDeVencimentoEPrioridade();
+        ArrayList<Tarefa> lista = gerenciador.listarTarefasOrdenadas();
 
         assertEquals(tarefa2.getTitulo(), lista.get(0).getTitulo());
         assertEquals(tarefa1.getTitulo(), lista.get(1).getTitulo());

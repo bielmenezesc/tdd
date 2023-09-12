@@ -17,19 +17,7 @@ public class GerenciadorDeTarefas {
         return new ArrayList<Tarefa>(this.tarefas.values());
     }
 
-    public ArrayList<Tarefa> listarTarefasOrdenadasPorDataDeVencimento() {
-        ArrayList<Tarefa> tarefasOrdenadas = listarTarefas();
-        Collections.sort(tarefasOrdenadas, Comparator.comparing(Tarefa::getDataDeVencimento));
-        return tarefasOrdenadas;
-    }
-
-    public ArrayList<Tarefa> listarTarefasOrdenadasPorPrioridade() {
-        ArrayList<Tarefa> tarefasOrdenadas = listarTarefas();
-        Collections.sort(tarefasOrdenadas, Comparator.comparing(Tarefa::getPrioridade));
-        return tarefasOrdenadas;
-    }
-
-    public ArrayList<Tarefa> listarTarefasOrdenadasPorDataDeVencimentoEPrioridade() {
+    public ArrayList<Tarefa> listarTarefasOrdenadas() {
         ArrayList<Tarefa> tarefasOrdenadas = listarTarefas();
         Collections.sort(tarefasOrdenadas, new Comparator<Tarefa>() {
             @Override
