@@ -11,6 +11,7 @@ import com.mycompany.app.Fatura;
 import com.mycompany.app.Processador;
 import com.mycompany.app.SituacaoBoleto;
 
+
 public class avlTest {
     Boleto[] boletos1 = {};
 
