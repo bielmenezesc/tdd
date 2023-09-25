@@ -1,0 +1,2 @@
+processClover (  {"children":["com/mycompany/app/"],"name":"Clover database seg set 25 2023 20:38:53 BRT","stats":{"AvgMethodComplexity":1.4444444,"Complexity":13,"ErroneousTests":0,"FailingTests":0,"FilteredElements":0,"PassingTests":0,"PcErroneousTests":-1,"PcFailingTests":-1,"PcPassingTests":-1,"TestExecutionTime":0,"Tests":0,"TotalChildren":1,"TotalPercentageCovered":100,"TotalStatements":28,"UncoveredElements":0},"title":"processadorBoletos 1.0-SNAPSHOT"}
+ ); 
