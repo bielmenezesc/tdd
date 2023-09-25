@@ -20,6 +20,11 @@
       <version>5.9.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.openclover</groupId>
+      <artifactId>clover-maven-plugin</artifactId>
+      <version>4.4.1</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -34,6 +39,11 @@
           <source>11</source>
           <target>11</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.openclover</groupId>
+        <artifactId>clover-maven-plugin</artifactId>
+        <version>4.4.1</version> <!-- Specify the desired version -->
       </plugin>
     </plugins>
   </build>
