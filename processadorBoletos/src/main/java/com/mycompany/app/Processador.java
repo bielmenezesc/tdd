@@ -4,7 +4,12 @@ import java.time.LocalDate;
 
 public class Processador {
 
-    public void processarBoletos(Boleto[] boletos, Fatura fatura) {
+    public void processarBoletos(Boleto[] boletos, Fatura fatura) throws Exception {
+        if (boletos.length == 0 || fatura.equals(null)) {
+            throw new Exception("ERRO");
+        }
+
+        Double valorInicialFatura = fatura.getValor();
         Double somaBoletos = 0.0;
 
         for (int i = 0; i < boletos.length; i++) {
@@ -14,7 +19,7 @@ public class Processador {
             new Pagamento(boleto.getValor(), LocalDate.now(), TipoPagamento.BOLETO, boleto, fatura);
         }
 
-        if (somaBoletos >= fatura.getValor()) {
+        if (somaBoletos >= valorInicialFatura) {
             fatura.setFaturaPaga();
         }
     }
